@@ -28,3 +28,23 @@ export async function signOutUser() {
 }
 
 /* Data functions */
+export async function getWorkshops() {
+    const response = await client.from('workshops').select('*, participants(*)');
+    return checkError(response);
+}
+
+export async function createParticipant(participant) {
+    const response = await client.from('participants').insert(participant);
+
+    return checkError(response);
+}
+
+export async function deleteParticipant(id) {
+    const response = await client.from('participants').delete().match({ id: id }).single();
+
+    return checkError(response);
+}
+
+function checkError(response) {
+    return response.error ? console.error(response.error) : response.data;
+}
