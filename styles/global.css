@@ -4,8 +4,8 @@
     --text-color: rgb(7, 5, 68);
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
-    --offset-color: rgb(217, 236, 217);
-    --action-color: rgb(77, 132, 252);
+    --offset-color: linear-gradient(to bottom, #c2b6aa 0%, #6780ac 100%);
+    --action-color: #c2b6aa;
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
         'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -68,4 +68,8 @@ main {
 
 .hidden {
     display: none;
+}
+
+.workshops-list {
+    border: 3px solid black;
 }
