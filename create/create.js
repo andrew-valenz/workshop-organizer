@@ -1,7 +1,8 @@
-import { createParticipant, getWorkshops } from '../fetch-utils.js';
+import { createParticipant, getWorkshops, signOutUser } from '../fetch-utils.js';
 
 const selectEl = document.querySelector('select');
 const form = document.querySelector('form');
+const signOutBtn = document.getElementById('sign-out-link');
 
 window.addEventListener('load', async () => {
     const workshops = await getWorkshops();
@@ -29,4 +30,8 @@ form.addEventListener('submit', async (e) => {
         contact_info: contact,
         workshop_id: workshopId,
     });
+});
+
+signOutBtn.addEventListener('click', async () => {
+    await signOutUser();
 });
