@@ -7,11 +7,11 @@ const signOutBtn = document.getElementById('sign-out-link');
 window.addEventListener('load', async () => {
     const workshops = await getWorkshops();
 
-    for (let workshop of workshops) {
+    for (let shop of workshops) {
         const workshopOption = document.createElement('option');
 
-        workshopOption.textContent = workshops.name;
-        workshopOption.value = workshops.id;
+        workshopOption.textContent = shop.name;
+        workshopOption.value = shop.id;
 
         selectEl.append(workshopOption);
     }
