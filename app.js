@@ -5,9 +5,12 @@ import { renderWorkshops } from './render-utils.js';
 import './auth/user.js';
 
 /* Get DOM Elements */
-
+const workshopsList = document.querySelector('workshops-list');
 /* State */
 
 /* Events */
-
+window.addEventListener('load', async () => {
+    await fetchAndDisplayWorkshops();
+});
 /* Display Functions */
+async function fetchAndDisplayWorkshops() {}
