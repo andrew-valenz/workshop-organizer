@@ -1,6 +1,6 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
+    --background: linear-gradient(to bottom, #c2b6aa 0%, #6780ac 100%);
+    --header-background: c2b6aa;
     --text-color: rgb(7, 5, 68);
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
