@@ -23,6 +23,7 @@ async function fetchAndDisplayWorkshops() {
         participantsEl.classList.add('participants');
         for (let participant of shop.participants) {
             const participantEl = document.createElement('li');
+            participantEl.classList.add('participant');
             participantEl.textContent = `${participant.name}, ${participant.contact_info}`;
 
             participantEl.addEventListener('click', async () => {

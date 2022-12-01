@@ -70,10 +70,39 @@ main {
     display: none;
 }
 
+.workshops-container {
+    width: 80%;
+    min-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .workshop {
-    border: 2px solid black;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    margin: 3px;
+    padding: 3px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 30px;
 }
 
+.wshop h3 {
+    margin: 0;
+}
 .participants {
-    border: 2px solid black;
+    display: flex;
+    margin: 3px;
+    padding: 3px;
+    flex-wrap: wrap;
+}
+
+.participant {
+    border-radius: 5px;
+    margin: 3px;
+    padding: 3px;
+    border: dotted 2px white;
+    cursor: pointer;
 }
