@@ -1,4 +1,4 @@
-import { createParticipant, getWorkshops, signOutUser } from '../fetch-utils.js';
+import { createParticipant, getWorkshops, signOutUser, getUser } from '../fetch-utils.js';
 
 const selectEl = document.querySelector('select');
 const form = document.querySelector('form');
@@ -36,3 +36,8 @@ form.addEventListener('submit', async (e) => {
 signOutBtn.addEventListener('click', async () => {
     await signOutUser();
 });
+export async function checkAuth() {
+    const user = getUser();
+
+    if (!user) location.replace('../');
+}
