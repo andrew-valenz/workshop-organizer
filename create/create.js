@@ -30,6 +30,7 @@ form.addEventListener('submit', async (e) => {
         contact_info: contact,
         workshop_id: workshopId,
     });
+    window.location.replace('../');
 });
 
 signOutBtn.addEventListener('click', async () => {
