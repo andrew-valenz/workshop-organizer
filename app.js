@@ -18,7 +18,9 @@ async function fetchAndDisplayWorkshops() {
     const shops = await getWorkshops();
     for (let shop of shops) {
         const shopEl = renderWorkshops(shop);
+        shopEl.classList.add('workshop');
         const participantsEl = document.createElement('ul');
+        participantsEl.classList.add('participants');
         for (let participant of shop.participants) {
             const participantEl = document.createElement('li');
             participantEl.textContent = `${participant.name}, ${participant.contact_info}`;
