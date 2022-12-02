@@ -1,26 +1,32 @@
-## The Golden Rule:
+# Wire Frame
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+![Wire frame](./assets/Screenshot%202022-11-30%20at%202.37.27%20PM.png)
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+![table 1](./assets/table1.png)
 
-## Making a plan
+![table 2](./assets/table2.png)
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-1. **For each HTML element ask: Why do I need this?**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-1. **Think about how to validate each of your features according to a Definition of Done**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+![rls policies](./assets/rls.png)
 
-Additional considerations:
+# Plan
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+1. Database Setup in supabase
+    - create 2 tables, `/workshops` and `/participants`
+      workshops table
+      name - varchar
+      participants table
+      name - varchar
+      contact_info - varchar
+      workshop_id - foreign key (workshops)
+2. (landing page) Workshops page
+    - getWorkshops function (fetch all of the workshops AND their members)
+    - render function that displays the workshops
+    - loop through workshops and display
+3. Create page
+    - HTML -> form elements with inputs for name, contact, placeholder `<select>` for workshops
+    - get our workshops (`getWorkshops`) and dynamically add `<option>` to select
+    - Add createMember function to fetch-utils
+    - add event for the form submit, grabbing the form data and sending it to supabase (calling createParticipant)
+4. Delete Participant (on workshops page)
+    - add deleteParticipant(id) in fetch-utils
+    - make participant element clickable & delete on click

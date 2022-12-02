@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Supabase Web App</title>
+        <title>Book Club Membership Tracker</title>
         <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
 
         <!-- js -->
@@ -15,7 +15,7 @@
             defer
             src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
         ></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="create.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,26 +26,37 @@
         />
 
         <!-- css -->
-        <link rel="stylesheet" href="/styles/reset.css" />
-        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/create.css" />
         <!-- add link for page specific css -->
     </head>
 
     <body>
         <header class="page-header">
-            <!-- <img class="logo" src="/assets/html_css_js.png" alt="logo" /> -->
-            <p class="title">Workshop</p>
-            <nav class="navBtn">
-                <a href="/create">Join a workshop!</a>
-                <a id="sign-out-link" href="./auth">Sign Out</a>
+            <h1 class="title">Add a Participant</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a id="sign-out-link" href="../">Sign Out</a>
             </nav>
         </header>
 
         <main>
-            <h2>Here are the Workshops!</h2>
-            <div class="workshops-container">
-                <section class="workshops-list"></section>
-            </div>
+            <form>
+                <label>
+                    Name
+                    <input name="name" />
+                </label>
+                <label>
+                    Contact Info
+                    <input name="contact" />
+                </label>
+                <label>
+                    Select a Workshop!
+                    <select class="select" name="workshop-id"></select>
+                </label>
+                <button class="add" type="submit">Add Participant!</button>
+            </form>
         </main>
     </body>
 </html>

@@ -1,0 +1,18 @@
+form {
+    margin-top: 50px;
+    font-size: 25px;
+}
+.add {
+    margin: 0;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-block-size: 40px;
+}
+.select {
+    margin: 15px;
+    display: flex;
+    justify-self: self-end;
+}
