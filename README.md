@@ -1,9 +1,12 @@
 # Wire Frame
 
 ![Wire frame](./assets/Screenshot%202022-11-30%20at%202.37.27%20PM.png)
-!(./assets/table1.png)
-!(./assets/table2.png)
-!(./assets/rls.png)
+
+![table 1](./assets/table1.png)
+
+![table 2](./assets/table2.png)
+
+![rls policies](./assets/rls.png)
 
 # Plan
 
