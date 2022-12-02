@@ -28,13 +28,13 @@
         <!-- css -->
         <link rel="stylesheet" href="../styles/reset.css" />
         <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/create.css" />
         <!-- add link for page specific css -->
     </head>
 
     <body>
         <header class="page-header">
-            <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <h1 class="title">Add a Member</h1>
+            <h1 class="title">Add a Participant</h1>
             <nav>
                 <a href="/">Home</a>
                 <a id="sign-out-link" href="../">Sign Out</a>
@@ -53,9 +53,9 @@
                 </label>
                 <label>
                     Select a Workshop!
-                    <select name="workshop-id"></select>
+                    <select class="select" name="workshop-id"></select>
                 </label>
-                <button type="submit">Add Participant!</button>
+                <button class="add" type="submit">Add Participant!</button>
             </form>
         </main>
     </body>

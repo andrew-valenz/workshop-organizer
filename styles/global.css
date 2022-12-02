@@ -70,7 +70,7 @@ main {
     display: none;
 }
 
-.workshops-container {
+*/ .workshops-container {
     width: 80%;
     min-width: 500px;
     display: flex;
@@ -79,7 +79,7 @@ main {
 }
 .workshop {
     border-radius: 10px;
-    border: 1px solid black;
+    border: 2px solid black;
     display: flex;
     margin: 3px;
     padding: 3px;
@@ -87,6 +87,7 @@ main {
     margin-right: 20px;
     margin-bottom: 30px;
     margin-left: 30px;
+    min-width: 250px;
 }
 
 .wshop h3 {
@@ -94,6 +95,7 @@ main {
 }
 .participants {
     display: flex;
+    /* max-width: 200px; */
     margin: 3px;
     padding: 3px;
     flex-wrap: wrap;
